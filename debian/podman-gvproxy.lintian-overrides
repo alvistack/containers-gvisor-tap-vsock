@@ -1,0 +1,3 @@
+podman-gvproxy: initial-upload-closes-no-bugs
+podman-gvproxy: no-copyright-file
+podman-gvproxy: statically-linked-binary
