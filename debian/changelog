@@ -1,0 +1,5 @@
+podman-gvproxy (100:0.8.2-1) UNRELEASED; urgency=medium
+
+  * https://github.com/containers/gvisor-tap-vsock/releases/tag/v0.8.2
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Mon, 20 Jan 2025 19:53:15 +0800
