@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_build:
+	mkdir -p bin
+	set -ex && \
+		go build \
+            -mod vendor -buildmode pie -v \
+			-ldflags "-s -w" \
+            -o ./bin/gvproxy ./cmd/gvproxy
+
+override_dh_auto_install:
+	install -Dpm755 -d debian/tmp/usr/libexec/podman
+	install -Dpm755 -t debian/tmp/usr/libexec/podman bin/gvproxy
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@
